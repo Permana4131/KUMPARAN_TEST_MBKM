@@ -9,6 +9,7 @@ import com.task.kumparantestmbkm.ui.profil.ProfilViewModel
 class ViewModelFactory private constructor(private val mKumparanTestRepository: KumparanTestRepository) :
     ViewModelProvider.NewInstanceFactory() {
 
+    @Suppress("UNCHECKED_CAST")
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {
         return when{
             modelClass.isAssignableFrom(PostsViewModel::class.java) -> {

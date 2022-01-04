@@ -38,12 +38,12 @@ class KumparanTestRepository private constructor(private val remoteDataSource: R
             override fun onLoadUsers(response: List<UserResponse>?) {
                 val postList = ArrayList<UserResponse>()
                 if (response != null) {
-                    for (userResponse in response) {
+                    for (_userResponse in response) {
 
                         val res = UserResponse(
-                            id = userResponse.id,
-                            company = userResponse.company,
-                            name = userResponse.name
+                            id = _userResponse.id,
+                            company = _userResponse.company,
+                            name = _userResponse.name
                         )
                         postList.add(res)
                     }
@@ -103,11 +103,11 @@ class KumparanTestRepository private constructor(private val remoteDataSource: R
             override fun onLoadAlbums(response: List<AlbumResponse>?) {
                 val commentsList = ArrayList<AlbumResponse>()
                 if (response != null) {
-                    for (albumResponse in response) {
-                        if (albumResponse.userId == userId) {
+                    for (_albumResponse in response) {
+                        if (_albumResponse.userId == userId) {
                             val res = AlbumResponse(
-                                id = albumResponse.id,
-                                title = albumResponse.title,
+                                id = _albumResponse.id,
+                                title = _albumResponse.title,
                             )
                             commentsList.add(res)
                         }
@@ -126,12 +126,12 @@ class KumparanTestRepository private constructor(private val remoteDataSource: R
             override fun onLoadPhotos(response: List<PhotosResponse>?) {
                 val commentsList = ArrayList<PhotosResponse>()
                 if (response != null) {
-                    for (photosResponse in response) {
-                        if (photosResponse.albumId == albumId) {
+                    for (_photosResponse in response) {
+                        if (_photosResponse.albumId == albumId) {
                             val res = PhotosResponse(
-                                id = photosResponse.id,
-                                title = photosResponse.title,
-                                url =  photosResponse.url
+                                id = _photosResponse.id,
+                                title = _photosResponse.title,
+                                url =  _photosResponse.url
                             )
                             commentsList.add(res)
                         }
