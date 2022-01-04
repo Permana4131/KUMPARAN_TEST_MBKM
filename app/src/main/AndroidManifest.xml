@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.task.kumparantestmbkm">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.KumparanTestMBKM"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="m"
+        android:fullBackupContent="@xml/backup_descriptor">
+        <activity
+            android:name=".ui.profil.PhotosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.profil.ProfilActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.posts.DetailPostActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.posts.PostsActivity"
+            android:exported="true"
+            android:label="@string/title_activity_posts">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
