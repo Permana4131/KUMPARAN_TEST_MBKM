@@ -5,7 +5,6 @@
     <string name="post_body">Post Body</string>
     <string name="company">Company</string>
     <string name="tes">Jika anda menggunakan bahasa Kotlin, ada fitur untuk membuat kelas Parcelable dengan lebih simpel dan tidak terlalu banyak kode hasil dari Add Implementation Parcelable, yaitu dengan menggunakan anotasi Parcelize. Untuk menambahkan parcelize Anda perlu mengikuti langkah-langkah beriku</string>
-    <string name="title_activity_posts">PostsActivity</string>
 
     <string name="comment">Comment</string>
     <string name="email">Email</string>

@@ -37,6 +37,18 @@ android {
     }
 }
 
+ext {
+    //dependencies version
+    junitVersion = '4.13.2'
+    junitExtversion = '1.1.2'
+    espressoVersion = '3.4.0'
+    androidTestVersion = '1.4.0'
+    androidCoreTestVersion = '2.1.0'
+    mockitoVersion = '3.6.0'
+    mockitoKotlinVersion = '2.2.0'
+
+}
+
 dependencies {
 
     implementation 'androidx.core:core-ktx:1.7.0'
@@ -62,4 +74,18 @@ dependencies {
     androidTestImplementation 'androidx.test:rules:1.4.0'
     androidTestImplementation "androidx.test.ext:junit:1.1.3"
     implementation 'com.github.chrisbanes:PhotoView:2.3.0'
+
+    //testing
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espressoVersion"
+    androidTestImplementation "androidx.test:runner:$androidTestVersion"
+    androidTestImplementation "androidx.test:rules:$androidTestVersion"
+    androidTestImplementation "androidx.test.ext:junit:$junitExtversion"
+    testImplementation 'org.robolectric:robolectric:4.6.1'
+    androidTestImplementation "androidx.test.espresso:espresso-contrib:$espressoVersion"
+    implementation 'com.android.support.test.espresso:espresso-idling-resource:3.0.2'
+
+    testImplementation "org.mockito:mockito-core:$mockitoVersion"
+    testImplementation "org.mockito:mockito-inline:$mockitoVersion"
+    testImplementation "androidx.arch.core:core-testing:$androidCoreTestVersion"
+    testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:$mockitoKotlinVersion"
 }
